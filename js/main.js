@@ -84,7 +84,7 @@ function login(){
 			
 		var paw = hex_md5(password.value);
 
-		var url = 'http://study.163.com/webDev/login.htm?userName='+username+'&password='+paw;
+		var url = '//study.163.com/webDev/login.htm?userName='+username+'&password='+paw;
 		
 		console.log(url);
 
@@ -190,7 +190,7 @@ function getlesson(){
 
 		var xml = creatXMLHTTP();
 
-		var url = 'http://study.163.com/webDev/couresByCategory.htm?pageNo='+pNo+'&psize='+pSiz+'&type='+typ;
+		var url = '//study.163.com/webDev/couresByCategory.htm?pageNo='+pNo+'&psize='+pSiz+'&type='+typ;
 
 		xml.open('get',url,true);
 		xml.send(null);
@@ -211,7 +211,7 @@ function getlesson(){
 						$('#pageno li').removeClass('active');
 						$(this).addClass('active');
 						
-						var newurl = 'http://study.163.com/webDev/couresByCategory.htm?pageNo='+this.index+'&psize='+pSiz+'&type='+typ;
+						var newurl = '//study.163.com/webDev/couresByCategory.htm?pageNo='+this.index+'&psize='+pSiz+'&type='+typ;
 						$('#lesson').html('');
 						xml.open('get',newurl,true);
 						xml.send(null);
@@ -316,7 +316,7 @@ function player(){
 			'width': document.body.scrollWidth+'px'||document.documentElement.scrollWidth+'px',
 			'height':document.body.scrollHeight+'px'||document.documentElement.scrollHeight+'px'
 		});
-		$('#player video').attr('src', 'http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4');
+		$('#player video').attr('src', '//mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4');
 		$('#player video').attr('autoplay','autoplay');
 	})
 
@@ -356,7 +356,7 @@ function hotlist(){
 
 	var hot_list = document.getElementById('hot_list');
 	var xml = creatXMLHTTP();
-	var url = 'http://study.163.com/webDev/hotcouresByCategory.htm?'+Math.random();
+	var url = '//study.163.com/webDev/hotcouresByCategory.htm?'+Math.random();
 	xml.open('get',url,true);
 	xml.send(null);
 	xml.onreadystatechange=function(){
